@@ -37,7 +37,7 @@ export default function LoginPage() {
         router. push('/member')
       }
     } catch (error) {
-      setMessage(error.message || '登录失败')
+      setMessage((error as Error).message || '登录失败')
     } finally {
       setLoading(false)
     }
